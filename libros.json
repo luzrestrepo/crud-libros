@@ -1,0 +1,19 @@
+[
+    {
+        "id":1,
+        "name":"cien años de soledad",
+        "autor":"Gabriel garcia marquez"
+    },
+    { 
+        "id":2,
+        "name":"como hacer que te pasen cosas buenas",
+        "autor": "Marian Rojas Estape"
+
+    },
+
+    {
+        "id":3,
+        "name": "cualquiera" ,
+        "autor": "el mismo"
+       }
+]
