@@ -1,5 +1,6 @@
 //importamos en modulo de express 
 const express = require ('express');
+require('dotenv').config();
 
 // utilizamos express 
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.json());
 let libros = require('./libros.json');
 
 
+const miLlaveSecreta=process.env.MI_LLAVE_SECRETA
 
 
 app.get('/libros', (req,res) =>{
@@ -24,6 +26,7 @@ app.get('/libros', (req,res) =>{
 //1. creacion 
 app.post('/libros',(req,res)=>{
     const libroNuevo = req.body
+    console.log('recibi un nuevo libro ', libroNuevo)
     libros.push(libroNuevo)
     console.log('***',libroNuevo)
     res.status(201).send({
@@ -69,10 +72,10 @@ app.put('/libros/:id', (req, res) => {
 app.delete('/libros/:id', (req, res) => {
     const id = req.params.id; 
     libros = libros.filter(libro=>libro.id != id)
-     res.status(200).send(libros)  
+    res.status(200).send(libros)  
 });
 
 //encendemos el servidor 
 app.listen(port,()=>{
-    console.log('servidor corriendo en '+port)
+    console.log('variable de entorno ',miLlaveSecreta)
 })

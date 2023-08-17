@@ -1,0 +1,23 @@
+{
+    id,
+    name,
+    autor,
+    genero,
+    año de publicacion 
+}
+
+1. listar libros {
+    devolver en la respuesta un unico libro 
+    listar todos libros
+    metodo= Get 
+    parametros = id , name 
+}
+
+2.Buscar libros 
+
+3. Actualizar los libros {
+    metodo = Put 
+    parametros= id , name, autor 
+}
+
+4. Agregar un nuevo libro 
